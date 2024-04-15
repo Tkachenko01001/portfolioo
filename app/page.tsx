@@ -1,3 +1,4 @@
+'use client'
 import { Box, Avatar, Typography, List, ListItem } from "@mui/material"
 import PersonIcon from '@mui/icons-material/Person';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
@@ -53,7 +54,7 @@ export default function Home() {
             <Typography variant="h4">
               Tech stack <ComputerOutlinedIcon />
             </Typography>
-            <List sx={{paddingTop: '16px', paddingLeft:'24px'}}>
+            <List sx={{ paddingTop: '16px', paddingLeft: '24px' }}>
               {TECH_STACK.map((technology) => (
                 <ListItem key={technology} sx={{ listStyleType: 'disc', display: 'list-item' }}>
                   <Typography variant="body1">
