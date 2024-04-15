@@ -6,12 +6,12 @@ import { Fragment } from "react"
 export default function Home() {
 
   const TECH_STACK = [
-    { technology: 'HTML', icon: 'icon' },
-    { technology: 'CSS/SCSS', icon: 'icon' },
-    { technology: 'JS/TS', icon: 'icon' },
-    { technology: 'React/Next', icon: 'icon' },
-    { technology: 'MUI', icon: 'icon' },
-    { technology: 'Tailwind', icon: 'icon' },
+    'HTML',
+    'CSS/SCSS',
+    'JS/TS',
+    'React/Next',
+    'MUI',
+    'Tailwind',
   ]
 
   return (
@@ -24,23 +24,23 @@ export default function Home() {
             sx={{ width: 120, height: 120 }}
           />
           <Box>
-            <Typography variant="h4" color={'#EEEEEE'}>
+            <Typography variant="h4">
               Denis Tkachenko👋🏻
             </Typography>
-            <Typography variant="subtitle1" color={'#EEEEEE'}>
+            <Typography variant="subtitle1">
               Front-end developper
             </Typography>
-            <Typography variant="subtitle2" color={'#EEEEEE'}>
+            <Typography variant="subtitle2">
               Location: Ukraine, Kharkiv
             </Typography>
           </Box>
         </Box>
         <Box>
           <Box p={5} pt={5}>
-            <Typography variant="h4" color={'#EEEEEE'}>
+            <Typography variant="h4">
               About <PersonIcon />
             </Typography>
-            <Typography variant="body1" color={'#EEEEEE'} mt={2}>
+            <Typography variant="body1" mt={2}>
               I am Front-end Developer with 2+ years of expertise.
               At the moment, my strength lies in developing e-commerce
               projects with custom CRM systems. My skills enable me to
@@ -50,13 +50,13 @@ export default function Home() {
             </Typography>
           </Box>
           <Box p={5} pt={5}>
-            <Typography variant="h4" color={'#EEEEEE'}>
+            <Typography variant="h4">
               Tech stack <ComputerOutlinedIcon />
             </Typography>
-            <List sx={{paddingTop: '16px', paddingLeft:'24px', color: '#EEEEEE'}}>
-              {TECH_STACK.map(({ technology }) => (
-                <ListItem sx={{ listStyleType: 'disc', display: 'list-item' }}>
-                  <Typography variant="body1" color={'#EEEEEE'}>
+            <List sx={{paddingTop: '16px', paddingLeft:'24px'}}>
+              {TECH_STACK.map((technology) => (
+                <ListItem key={technology} sx={{ listStyleType: 'disc', display: 'list-item' }}>
+                  <Typography variant="body1">
                     {technology}
                   </Typography>
                 </ListItem>
