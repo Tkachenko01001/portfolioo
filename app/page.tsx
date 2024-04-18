@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Box, Avatar, Typography, List, ListItem, Divider, Link } from "@mui/material"
+import { Box, Avatar, Typography, List, ListItem, Link } from "@mui/material"
 import PersonIcon from '@mui/icons-material/Person';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
 import GroupIcon from '@mui/icons-material/Group';
@@ -23,11 +23,17 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import WebIcon from '@mui/icons-material/Web';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+
 
 type ProjectInterface = {
   title: string,
@@ -228,89 +234,121 @@ export default function Home() {
   return (
     <Fragment>
       <Box display={'flex'}>
-      <Box display={'flex'} flexDirection={'column'} maxWidth={'550px'} p={15} pt={9}>
-        <Box display={"flex"} gap={'25px'} alignItems={'center'} flexDirection={'row'}>
-          <Avatar
-            alt="Front-end developper"
-            src="/my_photo.jpg"
-            sx={{ width: 120, height: 120 }}
-          />
+        <Box display={'flex'} flexDirection={'column'} maxWidth={'550px'} p={15} pt={9}>
+          <Box display={"flex"} gap={'25px'} alignItems={'center'} flexDirection={'row'}>
+            <Avatar
+              alt="Front-end developper"
+              src="/my_photo.jpg"
+              sx={{ width: 120, height: 120 }}
+            />
+            <Box>
+              <Typography variant="h4">
+                Denis Tkachenko👋🏻
+              </Typography>
+              <Typography variant="subtitle1">
+                Front-end developper
+              </Typography>
+              <Typography variant="subtitle2">
+                Location: Kharkiv, Ukraine
+              </Typography>
+            </Box>
+          </Box>
           <Box>
-            <Typography variant="h4">
-              Denis Tkachenko👋🏻
-            </Typography>
-            <Typography variant="subtitle1">
-              Front-end developper
-            </Typography>
-            <Typography variant="subtitle2">
-              Location: Kharkiv, Ukraine
-            </Typography>
+            <Box mt={5}>
+              <Typography variant="h4">
+                About <PersonIcon />
+              </Typography>
+              <Typography variant="body1" mt={2} textAlign={'justify'}>
+                I am Front-end Developer with 2+ years of expertise.
+                At the moment, my strength lies in developing e-commerce
+                projects with custom CRM systems. My skills enable me to
+                create responsive interfaces that are user-friendly for both the
+                client and the customer. Additionally, my development
+                experience allows me to write clear and clean code.
+              </Typography>
+            </Box>
+            <Box mt={5}>
+              <Typography variant="h4">
+                Tech stack <ComputerOutlinedIcon />
+              </Typography>
+              <List sx={{ paddingLeft: '24px' }}>
+                {TECH_STACK.map((technology) => (
+                  <ListItem key={technology} sx={{ listStyleType: 'disc', display: 'list-item' }}>
+                    <Typography variant="body1">
+                      {technology}
+                    </Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+            <Box mt={5}>
+              <Typography variant="h4">
+                Soft skills <GroupIcon />
+              </Typography>
+              <List sx={{ paddingLeft: '24px' }}>
+                {SOFT_SKILLS.map((skill) => (
+                  <ListItem key={skill} sx={{ listStyleType: 'disc', display: 'list-item' }}>
+                    <Typography variant="body1">
+                      {skill}
+                    </Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
+            <Box mt={5}>
+              <Typography variant="h4">
+                Languages <TranslateIcon />
+              </Typography>
+              <List sx={{ paddingLeft: '24px' }}>
+                {LANGUAGES.map((language) => (
+                  <ListItem key={language} sx={{ listStyleType: 'disc', display: 'list-item' }}>
+                    <Typography variant="body1">
+                      {language}
+                    </Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
           </Box>
         </Box>
-        <Box>
-          <Box mt={5}>
-            <Typography variant="h4">
-              About <PersonIcon />
-            </Typography>
-            <Typography variant="body1" mt={2} textAlign={'justify'}>
-              I am Front-end Developer with 2+ years of expertise.
-              At the moment, my strength lies in developing e-commerce
-              projects with custom CRM systems. My skills enable me to
-              create responsive interfaces that are user-friendly for both the
-              client and the customer. Additionally, my development
-              experience allows me to write clear and clean code.
-            </Typography>
-          </Box>
-          <Box mt={5}>
-            <Typography variant="h4">
-              Tech stack <ComputerOutlinedIcon />
-            </Typography>
-            <List sx={{paddingLeft: '24px'}}>
-              {TECH_STACK.map((technology) => (
-                <ListItem key={technology} sx={{ listStyleType: 'disc', display: 'list-item' }}>
-                  <Typography variant="body1">
-                    {technology}
-                  </Typography>
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          <Box mt={5}>
-            <Typography variant="h4">
-              Soft skills <GroupIcon />
-            </Typography>
-            <List sx={{paddingLeft: '24px'}}>
-              {SOFT_SKILLS.map((skill) => (
-                <ListItem key={skill} sx={{ listStyleType: 'disc', display: 'list-item' }}>
-                  <Typography variant="body1">
-                    {skill}
-                  </Typography>
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          <Box mt={5}>
-            <Typography variant="h4">
-              Languages <TranslateIcon />
-            </Typography>
-            <List sx={{paddingLeft: '24px'}}>
-              {LANGUAGES.map((language) => (
-                <ListItem key={language} sx={{ listStyleType: 'disc', display: 'list-item' }}>
-                  <Typography variant="body1">
-                    {language}
-                  </Typography>
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          </Box>
-        </Box>
-        
         <Box pl={'80px'} pt={'88px'} maxWidth={900} width={'100%'}>
           <Typography variant="h4">Work experience</Typography>
           <OutlinedTimeline />
         </Box>
-        
+      </Box>
+      <Divider sx={{borderColor: 'rgb(255 255 255 / 12%)'}} />
+      <Box display={'flex'} alignItems={'center'} justifyContent={'space-around'} marginBottom={'72px'}>
+        <List sx={{ display: 'flex', gap: '30px' }}>
+          <ListItem>
+            <Link href="https://www.linkedin.com/in/denis-tkachenko-developer/" color={'#fff'}>
+              <LinkedInIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'ease 0.2s' } }} />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://t.me/Tk_d_01" color={'#fff'}>
+              <TelegramIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s' } }} />
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://github.com/Tkachenko01001" color={'#fff'}>
+              <GitHubIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s' } }} />
+            </Link>
+          </ListItem>
+        </List>
+        <List>
+          <ListItem>
+            <Link href="tel:+380999660502" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
+              <PhoneIcon className="icon" sx={{ width: '30px', height: '30px', color: 'white' }} />
+              +380999660502
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="mailto:tkachenkod01001@gmail.com" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
+              <EmailOutlinedIcon className="icon" sx={{ width: '30px', height: '30px', color: 'white' }} />
+              tkachenkod01001@gmail.com
+            </Link>
+          </ListItem>
+        </List>
       </Box>
     </Fragment>
   )
