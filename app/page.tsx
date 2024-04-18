@@ -74,7 +74,7 @@ const BasicChips:React.FC<PropsStack> = ({stack}) => {
   return (
     <Stack direction="row" flexWrap={'wrap'} spacing={0} sx={{ margin: 0, gap: '8px' }}>
       {stack.map((tech: string) => (
-        <Chip label={tech} sx={{ color: 'white', backgroundColor: 'rgb(255 255 255 / 21%)'}}/>
+        <Chip key={tech} label={tech} sx={{ color: 'white', backgroundColor: 'rgb(255 255 255 / 21%)'}}/>
       ))}
     </Stack>
   );
@@ -305,9 +305,7 @@ export default function Home() {
           </Box>
           </Box>
         </Box>
-        <Box>
-          <Divider orientation="vertical" color={'white'} sx={{borderColor: 'rgb(32 27 27 / 65%)', marginTop: '100px', height: '84%'}} />
-        </Box>
+        
         <Box pl={'80px'} pt={'88px'} maxWidth={900} width={'100%'}>
           <Typography variant="h4">Work experience</Typography>
           <OutlinedTimeline />
