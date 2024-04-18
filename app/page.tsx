@@ -106,7 +106,7 @@ const ProjectCard: React.FC<PropsProject> = ({ project, stack }) => {
     <Card sx={{ maxWidth: 635, backgroundColor: '#ffffff1c' }}>
       <CardHeader
         sx={{ textAlign: 'justify'}}
-        avatar={<WebIcon sx={{color: 'white', width: '50px', height: '50px'}} />}
+        
       title={
         <Typography variant="h5" component="h2">
           <Link href={project.links[1]} color="white" underline="hover" sx={{display: 'flex', alignItems: 'flex-start', gap: '8px'}}>
