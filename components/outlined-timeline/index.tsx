@@ -55,7 +55,7 @@ const OutlinedTimeline = () => {
       paddingLeft: '0px',
     }}>
       {PROJECTS.map((project) => (
-        <TimelineItem>
+        <TimelineItem key={project.title}>
           <TimelineOppositeContent>
             {project.time}
           </TimelineOppositeContent>
