@@ -7,7 +7,6 @@ import {
     TimelineContent,
     TimelineDot
 } from '@mui/lab'
-import { useTheme } from '@mui/material/styles';
 import ProjectCard from '../project-card';
 
 type ProjectInterface = {
@@ -48,7 +47,6 @@ const PROJECTS: ProjectInterface[] = [
 ]
 
 const OutlinedTimeline = () => {
-  const theme = useTheme();
   return (
     <Timeline position="alternate" sx={{
       paddingTop: '72px',
