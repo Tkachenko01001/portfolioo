@@ -1,7 +1,7 @@
 'use client'
 
-import { Fragment } from "react"
-import { Box, Avatar, Typography, List, ListItem, Link, Divider } from "@mui/material"
+import { Fragment, useState } from "react"
+import { Box, Avatar, Typography, List, ListItem, Link, Divider, SwipeableDrawer, IconButton } from "@mui/material"
 import { useTheme } from '@mui/material/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
@@ -13,8 +13,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import OutlinedTimeline from "@/components/outlined-timeline";
+import MobileMenu from "@/components/mobile-menu";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
 
   const theme = useTheme();
 
@@ -47,15 +49,16 @@ export default function Home() {
       <Box display={'flex'} sx={{
         [theme.breakpoints.down(1120)]: {
           justifyContent: 'center',
-        },}}>
+        },
+      }}>
         <Box display={'flex'} flexDirection={'column'} maxWidth={'550px'} p={15} pt={9} sx={{
           [theme.breakpoints.down(1441)]: {
             paddingLeft: '50px',
             paddingRight: '50px'
           },
           [theme.breakpoints.down(1120)]: {
-              paddingLeft: '20px',
-              paddingRight: '40px'
+            paddingLeft: '20px',
+            paddingRight: '70px'
           },
         }}>
           <Box display={"flex"} gap={'25px'} alignItems={'center'} flexDirection={'row'}>
@@ -136,39 +139,54 @@ export default function Home() {
         </Box>
         <Box pt={'88px'} maxWidth={900} width={'100%'} sx={{
           [theme.breakpoints.down(1120)]: {
-          display: 'none',
-        },}}>
+            display: 'none',
+          },
+        }}>
           <Typography variant="h4">Work experience</Typography>
           <OutlinedTimeline />
         </Box>
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </Box>
-      <Divider sx={{borderColor: 'rgb(255 255 255 / 12%)'}} />
+      <Divider sx={{ borderColor: 'rgb(255 255 255 / 12%)' }} />
       <Box display={'flex'} alignItems={'center'} justifyContent={'space-around'} marginBottom={'72px'} sx={{
         [theme.breakpoints.down(611)]: {
           flexDirection: 'column',
           gap: '20px',
           margingBottom: '50px'
-          },}}>
+        },
+      }}>
         <List sx={{ display: 'flex', gap: '30px' }}>
           <ListItem>
             <Link href="https://www.linkedin.com/in/denis-tkachenko-developer/" color={'#fff'}>
-              <LinkedInIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'ease 0.2s', [theme.breakpoints.down(611)]: {
-          padding: '0px'
-          }, } }} />
+              <LinkedInIcon sx={{
+                width: '40px', height: '40px', '&:hover': {
+                  color: '#0e76a8', transform: 'scale(1.2)', transition: 'ease 0.2s', [theme.breakpoints.down(611)]: {
+                    padding: '0px'
+                  },
+                }
+              }} />
             </Link>
           </ListItem>
           <ListItem>
             <Link href="https://t.me/Tk_d_01" color={'#fff'}>
-              <TelegramIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s', [theme.breakpoints.down(611)]: {
-          padding: '0px'
-          }, } }} />
+              <TelegramIcon sx={{
+                width: '40px', height: '40px', '&:hover': {
+                  color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s', [theme.breakpoints.down(611)]: {
+                    padding: '0px'
+                  },
+                }
+              }} />
             </Link>
           </ListItem>
           <ListItem>
             <Link href="https://github.com/Tkachenko01001" color={'#fff'}>
-              <GitHubIcon sx={{ width: '40px', height: '40px', '&:hover': { color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s', [theme.breakpoints.down(611)]: {
-          padding: '0px'
-          }, } }} />
+              <GitHubIcon sx={{
+                width: '40px', height: '40px', '&:hover': {
+                  color: '#0e76a8', transform: 'scale(1.2)', transition: 'transform ease 0.2s', [theme.breakpoints.down(611)]: {
+                    padding: '0px'
+                  },
+                }
+              }} />
             </Link>
           </ListItem>
         </List>
@@ -187,6 +205,23 @@ export default function Home() {
           </ListItem>
         </List>
       </Box>
+      <SwipeableDrawer
+        anchor="right"
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        onOpen={() => setIsOpen(true)}
+        PaperProps={{
+          sx: {
+            color: '#fff',
+            backgroundColor: '#222',
+            width: '100%',
+            height: '100%'
+          }
+        }}
+      >
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <OutlinedTimeline />
+      </SwipeableDrawer>
     </Fragment>
   )
 }

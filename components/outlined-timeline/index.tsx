@@ -1,3 +1,4 @@
+import { useTheme } from '@mui/material/styles';
 import {
     TimelineOppositeContent,
     Timeline,
@@ -7,6 +8,9 @@ import {
     TimelineContent,
     TimelineDot
 } from '@mui/lab'
+import {
+  timelineOppositeContentClasses,
+} from '@mui/lab/TimelineOppositeContent';
 import ProjectCard from '../project-card';
 
 type ProjectInterface = {
@@ -47,8 +51,14 @@ const PROJECTS: ProjectInterface[] = [
 ]
 
 const OutlinedTimeline = () => {
+  const theme = useTheme();
   return (
     <Timeline position="alternate" sx={{
+      [theme.breakpoints.down(1120)]: {
+        [`& .${timelineOppositeContentClasses.root}`]: {
+          flex: 0.2,
+        },
+      },
       paddingTop: '72px',
       paddingLeft: '0px',
     }}>
