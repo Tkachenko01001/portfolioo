@@ -29,7 +29,7 @@ const PROJECTS: ProjectInterface[] = [
     desc: 'E-commerce project with custom CRM systems.',
     role: 'As a front end developer, I was involved in the implementation of routing, development of the main page, catalog, favorites, authorization, cooperation, placing orders, creating products within the CRM.I also work closely with designers and other developers and offer my ideas for improving the quality of user interaction with our interface.',
     time: '2023 - current',
-    stack: ['React', "Redux toolkit", "TypeScript", "Module SCSS", "MUI", "Formik", "Axios", "Rest API"],
+    stack: ['React', "MUI", "Redux toolkit", "TypeScript", "Module SCSS", "Formik", "Axios", "Rest API"],
   },
   {
     title: 'Fake store',
