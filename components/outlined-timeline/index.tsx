@@ -45,7 +45,7 @@ const PROJECTS: ProjectInterface[] = [
     desc: 'Task scheduler project with drag and drop functionality.',
     role: 'I was the team leader of the front-end team, reviewed the code of the team members, helped solve problems, and also set up a repository, developed a board background switch, implemented routing and developed a board filter.',
     time: '2023',
-    stack: ['React', "Redux toolkit", "Formik", "clsx", "MUI", "Module SCSS", "Formik", "Axios", "Rest API"]
+    stack: ['React', "Redux toolkit", "clsx", "MUI", "Module SCSS", "Formik", "Axios", "Rest API"]
 
   }
 ]
