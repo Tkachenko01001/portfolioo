@@ -198,7 +198,7 @@ export default function Home() {
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="mailto:tkachenkod01001@gmail.com" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
+            <Link href="mailto:dtkachenko01001@gmail.com" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
               <EmailOutlinedIcon className="icon" sx={{ width: '30px', height: '30px', color: 'white' }} />
               tkachenkod01001@gmail.com
             </Link>
