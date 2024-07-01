@@ -25,8 +25,17 @@ export default function Home() {
     'CSS/SCSS',
     'JS/TS',
     'React/Next',
+    'Next-intl',
+    'SSR/SSG',
+    'React-hook-form',
+    'Redux-toolkit',
+    'Clsx',
     'MUI',
     'Tailwind',
+    'Shadcn',
+    'Framer-motion',
+    'Rest API',
+    'Axios',
   ]
 
   const SOFT_SKILLS = [
