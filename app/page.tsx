@@ -84,7 +84,7 @@ export default function Home() {
                 Front-end developper
               </Typography>
               <Typography variant="subtitle2">
-                Location: Kharkiv, Ukraine
+                Location: Ukraine
               </Typography>
             </Box>
           </Box>
@@ -94,12 +94,7 @@ export default function Home() {
                 About <PersonIcon />
               </Typography>
               <Typography variant="body1" mt={2} textAlign={'justify'}>
-                I am Front-end Developer with 2+ years of expertise.
-                At the moment, my strength lies in developing e-commerce
-                projects with custom CRM systems. My skills enable me to
-                create responsive interfaces that are user-friendly for both the
-                client and the customer. Additionally, my development
-                experience allows me to write clear and clean code.
+                I am a Front-end Developer with 2+ years of expertise. My strength lies in developing a wide range of projects, including custom CRM systems and e-commerce platforms. My skills enable me to create responsive interfaces that are user-friendly for both clients and customers. Additionally, my development experience allows me to write clear code.
               </Typography>
             </Box>
             <Box mt={5}>
