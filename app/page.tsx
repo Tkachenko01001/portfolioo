@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment, useState } from "react"
-import { Box, Avatar, Typography, List, ListItem, Link, Divider, SwipeableDrawer, IconButton } from "@mui/material"
+import { Box, Avatar, Typography, List, ListItem, Link, Divider, SwipeableDrawer, Button } from "@mui/material"
 import { useTheme } from '@mui/material/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
@@ -12,6 +12,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import OutlinedTimeline from "@/components/outlined-timeline";
 import MobileMenu from "@/components/mobile-menu";
 
@@ -59,6 +60,10 @@ export default function Home() {
         [theme.breakpoints.down(1120)]: {
           justifyContent: 'center',
         },
+        [theme.breakpoints.down(600)]: {
+          padding: '20px',
+        },
+        
       }}>
         <Box display={'flex'} flexDirection={'column'} maxWidth={'550px'} p={15} pt={9} sx={{
           [theme.breakpoints.down(1441)]: {
@@ -194,6 +199,15 @@ export default function Home() {
             </Link>
           </ListItem>
         </List>
+        <Button
+        variant="contained"
+        href="/Tkachenko_Denis_front-end_developer.pdf"
+        download
+        startIcon={<DownloadForOfflineIcon />}
+        sx={{ mt: 2, backgroundColor: '#0e76a8' }}
+      >
+        Download CV
+      </Button>
         <List>
           <ListItem>
             <Link href="tel:+380999660502" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
