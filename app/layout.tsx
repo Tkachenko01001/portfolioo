@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Tkachenko Denis Front-end developer",
@@ -12,7 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{backgroundColor: '#222', color: '#EEEEEE'}}>{children}</body>
+      <body style={{ backgroundColor: '#222', color: '#EEEEEE' }}>{children}</body>
+      <GoogleAnalytics gaId="G-ECV9SB446L" />
     </html>
-  );
+  )
 }
