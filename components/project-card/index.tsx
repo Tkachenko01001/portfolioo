@@ -37,16 +37,9 @@ const ProjectCard: React.FC<PropsProject> = ({ project, stack }) => {
         
         title={
           <Typography variant="h5" component="h2">
-            <Link href={project.links[1]} color="white" underline="hover" sx={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+            <Link href={project.links[1]} color={ project.links[1] !== '' ? "white" : '#6e6e6e'} underline="hover" sx={{ display: 'flex', alignItems: 'flex-start', gap: '8px', pointerEvents: project.links[1] === '' ? 'none' : 'auto' }}>
               {project.title}
-              <OpenInNewIcon sx={{ width: '20px', height: '20px' }} />
-            </Link>
-          </Typography>
-        }
-        subheader={
-          <Typography variant="body1" component="p">
-            <Link href={project.links[0]} color="white" underline="hover">
-              GitHub
+              {project.links[1] !== '' && <OpenInNewIcon sx={{ width: '20px', height: '20px' }} />}
             </Link>
           </Typography>
         }
