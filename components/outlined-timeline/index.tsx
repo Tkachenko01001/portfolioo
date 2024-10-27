@@ -32,6 +32,14 @@ const PROJECTS: ProjectInterface[] = [
     stack: ['Next.js', "Tailwind CSS", "Clsx", "TypeScript", "Next-intl", "Zod", "React-hook-form", "Shadcn", "Framer-motion"],
   },
   {
+    title: 'One of theme',
+    links: ['', 'https://oneofthem.com.ua'],
+    desc: 'Blog site with integrated headless CMS for content management.',
+    role: 'I developed the main static pages and layout, and also used integration with CMS for some blocks on the pages.',
+    time: 'August 2024',
+    stack: ['Next.js', "Contentful CMS", "Tailwind CSS", "Clsx", "TypeScript", "Next-intl", "Zod", "React-hook-form", "Shadcn", "Framer-motion"]
+  },
+  {
     title: 'Invictusgames',
     links: ['', 'https://invictusgames.in.ua'],
     desc: 'Website for organizing sporting events.',
@@ -47,15 +55,6 @@ const PROJECTS: ProjectInterface[] = [
     time: 'June 2023 - current',
     stack: ['React', "MUI", "Redux toolkit", "TypeScript", "Module SCSS", "Formik", "Axios", "Rest API"],
   },
-  {
-    title: 'Task Pro',
-    links: ['', 'https://tkachenko01001.github.io/project-REACT_NODE/welcome'],
-    desc: 'Task scheduler project with drag and drop functionality.',
-    role: 'I was the team leader of the front-end team, reviewed the code of the team members, helped solve problems, and also set up a repository, developed a board background switch, implemented routing and developed a board filter.',
-    time: 'May 2023',
-    stack: ['React', "Redux toolkit", "clsx", "MUI", "Module SCSS", "Formik", "Axios", "Rest API"]
-
-  }
 ]
 
 const OutlinedTimeline = () => {

@@ -25,17 +25,19 @@ export default function Home() {
     'HTML',
     'CSS/SCSS',
     'JS/TS',
-    'React/Next',
+    'React/Next.js',
     'Next-intl',
     'SSR/SSG',
     'React-hook-form',
     'Redux-toolkit',
+    'Apollo client',
     'Clsx',
     'MUI',
-    'Tailwind',
+    'Tailwind css',
     'Shadcn',
     'Framer-motion',
     'Rest API',
+    'GraphGL',
     'Axios',
   ]
 
@@ -50,8 +52,8 @@ export default function Home() {
 
   const LANGUAGES = [
     'Ukrainian - native',
-    'Russian - native',
-    'English - A1',
+    'Russian - fluent',
+    'English - A2',
   ]
 
   return (
@@ -99,7 +101,17 @@ export default function Home() {
                 About <PersonIcon />
               </Typography>
               <Typography variant="body1" mt={2} textAlign={'justify'}>
-                I am a Front-end Developer with 2+ years of expertise. My strength lies in developing a wide range of projects, including custom CRM systems and e-commerce platforms. My skills enable me to create responsive interfaces that are user-friendly for both clients and customers. Additionally, my development experience allows me to write clear code.
+                Frontend Developer with experience in creating and optimizing user interfaces for various web applications,
+                including:
+              </Typography>
+              <Box component='ul' display='flex' flexDirection='column' gap={2} margin='25px 0px'>
+                <li>SaaS platforms — interfaces for business applications.</li>
+                <li>E-commerce — scalable and user-friendly online store solutions.</li>
+                <li>Social platforms — functionality for user interaction.</li>
+                <li>Content platforms and blogs — responsive, SEO-optimized interfaces for content publishing.</li>
+              </Box>
+              <Typography variant="body1" textAlign='justify'>
+                Skilled in modern frontend technologies, team collaboration, and performance optimization. Focused on clean, maintainable code and user-centered solutions.
               </Typography>
             </Box>
             <Box mt={5}>
@@ -200,14 +212,14 @@ export default function Home() {
           </ListItem>
         </List>
         <Button
-        variant="contained"
-        href="/Tkachenko_Denis_front-end_developer.pdf"
-        download
-        startIcon={<DownloadForOfflineIcon />}
-        sx={{ mt: 2, backgroundColor: '#0e76a8' }}
-      >
-        Download CV
-      </Button>
+          variant="contained"
+          href="/Tkachenko_Denis_front-end_developer_2024.pdf"
+          download
+          startIcon={<DownloadForOfflineIcon />}
+          sx={{ mt: 2, backgroundColor: '#0e76a8' }}
+        >
+          Download CV
+        </Button>
         <List>
           <ListItem>
             <Link href="tel:+380999660502" underline="hover" sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#fff', '&:hover .icon': { transform: 'scale(1.2)', transition: 'transform 0.2s ease', color: '#0e76a8' } }}>
