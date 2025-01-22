@@ -213,7 +213,7 @@ export default function Home() {
         </List>
         <Button
           variant="contained"
-          href="/Tkachenko_Denis_front-end_developer_2024.pdf"
+          href="/Tkachenko_Denis_front-end_developer_2025.pdf"
           download
           startIcon={<DownloadForOfflineIcon />}
           sx={{ mt: 2, backgroundColor: '#0e76a8' }}
